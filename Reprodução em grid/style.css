@@ -1,34 +1,38 @@
-*{
+* { 
     box-sizing: border-box;
     margin: 0;
+    font-family: 'cairo';
 }
-body{
+
+body {
     display: grid;
     width: 100%;
     height: 100%;
     background-color: white;
 }
-#login{
+
+  #login {
     display: grid;
     height: 40px;
-    grid-template-columns: 0.67fr 0.08fr 0.4fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 0.67fr;
+    grid-template-columns:  0.67fr;
     background-color: #f5f5f5;
     align-items: center;
-   
+
 }
+
 #login #icone_email {
     height: 15px;
     width: 15px;
     grid-column: 2;
-    
-    
-    
-}
-#login #email {
-   font-size: 15px;
-  grid-column: 3;
 
-  border-right: solid rgba(49, 49, 49, 0.432) 0.1px ; 
+
+
+}
+
+#login #email {
+    font-size: 15px;
+    grid-column: 3;
+    border-right: solid rgba(49, 49, 49, 0.432) 0.1px;
 }
 
 
@@ -37,37 +41,94 @@ body{
     grid-column: 4;
     font-size: 17px;
 }
-#login #user{
-grid-column: 10;
-width: 15px;
-height: 15px;
+
+#login #user {
+    grid-column: 10;
+    width: 15px;
+    height: 15px;
 
 }
-#login #user
-#main{display: grid;
-grid-template-columns: 1fr  1.5fr 1.3fr 1.3fr 1.4fr 1fr;
-grid-template-rows: 80px 80px  431px 271px;
+
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr 1.3fr 1.3fr 1.4fr 1fr;
+    grid-template-rows: 80px 80px 431px 271px;
 }
-#main div {border: solid black 1px;}
 
-#Logo{grid-column: 2 ;}
-#Nav{grid-column: 3/6 ;}
-#menu{grid-column: 2 ;
-grid-row:2/4 ;}
-#busca{grid-column: 3/6 ;
-grid-row: 2;}
-#banner{grid-column: 3/6 ;
-grid-row: 3;
-background-image: url() ;
-background-position: center;
-background-size: cover;
-background-repeat: no-repeat;}
+main div { border: solid 1px;}
 
-#prodi1{ grid-row: 4;
-grid-column: 2;}
+#Logo {grid-column: 2;}
 
-#prodi2{grid-row: 4;
-grid-column: 3;}
+#Nav {grid-column: 3/5;}
+
+#menu {grid-column: 2;
+grid-row: 2/4;
+}
+#nav-drop{
+    list-style: none;
+    display: flex;
+    padding: 0;
+    align-items: center;
+    justify-content: space-around;
+    height: 80px;
+}
+
+#list-page {
+    width: 400%;
+    position: absolute;
+    list-style: none;
+    padding: 0;
+    top: 50px;
+    z-index: -99;
+    transition: 0.6;
+    background-color: black;
+    color: white;
+    opacity: 0;
+    }
+#nav-drop{
+    position: relative;
+}
+#nav-drop:hover #list-page{
+    opacity: 1;
+    z-index:99 ;
+    top: 53px;
+}
+#busca {
+   
+
+    grid-column: 3/6;
+    grid-row: 2;
+}
+
+#banner {
+    grid-column: 3/6;
+    grid-row: 3;
+    background-image: url();
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#prodi1 {
+    grid-row: 4;
+    grid-column: 2;
+}
+
+#prodi2 {
+    grid-row: 4;
+    grid-column: 3;
+}
+
+#prodi3 {
+    grid-row: 4;
+    grid-column: 4;
+}
+
+#prodi4 {
+    grid-column: 5;
+    grid-row: 4;
+}
 
 #prodi3{grid-row: 4;
 grid-column:4 ;}
